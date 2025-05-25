@@ -1,0 +1,897 @@
+@charset "UTF-8";
+/* ===== 共通レイアウト ===== */
+/* ===== ヘッダー ===== */
+header {
+    background-color: #D8B7C3;
+    text-align: center;
+    font-family: "Yusei Magic", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    position: relative;
+    height: 15vh;
+    max-width: 100%;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease-out;
+}
+
+header.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hamburgerBtn p {
+    position: fixed;
+    font-size: 40px;
+    top: 10px;
+    left: 20px;
+    cursor: pointer;
+    margin: 0;
+    z-index: 100;
+}
+
+.dorrBtn p {
+    position: fixed;
+    font-size: 35px;
+    top: 8px;
+    right: 20px;
+    cursor: pointer;
+    margin: 0;
+    border-radius: 10px;
+    z-index: 20;
+}
+
+.headerNav {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.headerNav ul {
+    display: flex;
+    gap: 1.5vw;
+    padding: 3px 20px;
+    margin: 0;
+    border-left: 2px solid #000;
+    border-top: 2px solid #000;
+    align-items: center;
+    background-color: #D8B7C3;
+}
+
+.headerNav ul li {
+    list-style: none;
+    display: block;
+    margin-bottom: 0;
+}
+
+.headerNav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 2px 8px;
+    display: block;
+}
+
+.title h1 {
+    display: inline-block;
+    margin-top: 2vh;
+    font-size: 2rem;
+    font-weight: 580;
+}
+
+.title .titleName {
+    font-size: 3rem;
+    font-weight: 590;
+    text-align: center;
+}
+
+.rotateName {
+    display: inline-block;
+    transform: rotate(-10deg);
+    position: absolute;
+    left: 23vw;
+}
+
+.headerNav ul li a:hover {
+    text-decoration: underline double #333;
+}
+
+#header.hide {
+    transform: translateY(-120%);
+}
+
+
+/* =====サイドナビ===== */
+.mainNav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sideNavL,
+.sideNavR {
+    background-color: #E6E6FA;
+    width: 17vw;
+    border-radius: 10px;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease-out;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.sideNavL.show,
+.sideNavR.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sideNavR {
+    position: relative;
+    right: 0;
+}
+
+.sideNavL {
+    left: 0;
+}
+
+.navTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.navTitle img {
+    height: 1.8em;
+    width: auto;
+    vertical-align: middle;
+}
+
+.navTitle h2,
+.profile .userName h3 {
+    margin: 0;
+    font-family: "Yusei Magic", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.tagList .navTitle h2,
+.profile .navTitle h2,
+.mapList .navTitle h2,
+.animeList .navTitle h2 {
+    font-size: 17px;
+}
+
+.popularArticleRanking .navTitle h2 {
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.latestBlog .navTitle h2 {
+    font-size: 20px;
+}
+
+.popularArticleRanking .navTitle img,
+.tagList .navTitle img {
+    width: 1.5vw;
+    height: auto;
+    vertical-align: middle;
+    position: relative;
+    left: 0.5vw;
+    margin-right: 3px;
+}
+
+.latestBlog .navTitle img {
+    position: relative;
+    left: 0.5vw;
+}
+
+.mapList .navTitle img,
+.animeList .navTitle img {
+    position: relative;
+    left: 10px;
+    margin-right: 3px;
+}
+
+.mapList .navTitle {
+    margin-top: 10px;
+}
+
+.siteMapBtn {
+    margin-bottom: 10px;
+}
+
+.siteMapBtn a {
+    display: block;
+}
+
+.mapList ul li,
+.animeList li,
+.popularArticleRanking ol li,
+.tagList ul li,
+.siteMapBtn a,
+.adminBtn a,
+footer a {
+    list-style: none;
+    text-decoration: none;
+    color: #000000;
+}
+
+ul li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    display: flex;
+    position: relative;
+}
+
+
+
+.mapList ul li a::after {
+    content: ">";
+    color: #000000;
+    position: absolute;
+    right: 5vw;
+}
+
+/* 地図 */
+.mapList ul li {
+    position: relative;
+    margin-left: -2vw;
+}
+
+.mapList ul li a {
+    font-size: 15px;
+    color: #000000;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.mapList ul li {
+    margin-bottom: 4vh;
+}
+
+/* アニメ */
+.animeList .aiueo {
+    display: flex;
+    position: relative;
+    margin-left: -2vw;
+}
+
+.animeList .aiueo .htow {
+    position: absolute;
+    right: 4vw;
+}
+
+.animeList ul .aiueo .htow li a::after {
+    content: ">";
+    color: #000000;
+    position: relative;
+    left: 1vw;
+}
+
+.animeList ul .aiueo .aton li a::after {
+    content: ">";
+    color: #000000;
+    position: relative;
+    left: 1vw;
+}
+
+.animeList ul .aiueo li a {
+    color: #000000;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.animeList {
+    margin-top: 40px;
+    margin-top: 10vh;
+}
+
+.animeList ul li {
+    margin-bottom: 3vh;
+}
+
+
+/* サイトマップボタン */
+.siteMapBtn {
+    margin-top: 7vh;
+}
+
+.siteMapBtn a {
+    list-style: none;
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    position: relative;
+    margin-left: 1.3vw;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.siteMapBtn a:hover {
+    text-decoration: underline solid #333;
+}
+
+
+/* 管理者用ページボタン */
+.adminBtn {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 0.5vw;
+    width: calc(100% - 1vw);
+}
+
+.adminBtn a {
+    list-style: none;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+    display: block;
+    text-align: center;
+}
+
+.adminBtn a:hover {
+    text-decoration: underline solid #333;
+}
+
+/* 人気記事ランキング */
+.popularArticleRanking ol li a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.popularArticleRanking ol {
+    margin-top: 0;
+}
+
+.popularArticleRanking ol li {
+    display: block;
+    margin: 0 auto 1vw -2.5vw;
+}
+
+.popularArticleRanking .blogTitle {
+    font-size: 13px;
+    color: #000000;
+}
+
+.popularArticleRanking a:hover {
+    text-decoration: underline solid #333;
+}
+
+.popularArticleRanking a {
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* タグ(上位6件) */
+.tagList ul li a {
+    list-style: none;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.tagList ul li a::before {
+    content: "#";
+    color: #000000;
+}
+
+.tagList ul li {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: -2vw;
+}
+
+.tagList .tagListTop a:hover {
+    text-decoration: underline solid #333;
+}
+
+.tagList .tagListTop a {
+    margin-left: 1vw;
+    display: block;
+    margin-bottom: 5vh;
+    list-style: none;
+    text-decoration: none;
+    color: #000000;
+}
+
+/* 最近の投稿 */
+.latestBlog ul li a {
+    list-style: none;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.latestBlog ul li {
+    margin-left: -2vw;
+}
+
+.latestBlog ul li a {
+    font-size: 13px;
+}
+
+
+/* プロフィール */
+.profile .userName img {
+    width: 100px;
+    height: auto;
+}
+
+.profile .userName img {
+    width: 5vw;
+    border-radius: 50%;
+    margin-left: 0.5vw;
+    margin-top: 1vh;
+}
+
+.profile .userName {
+    display: flex;
+    align-items: center;
+}
+
+.profile .userName h3 {
+    margin-left: 1vw;
+}
+
+.profile .profMain {
+    background-color: white;
+    border-radius: 5px;
+    width: 13vw;
+    margin: 0 auto;
+}
+
+.profile .profMain h3 {
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: -1px;
+}
+
+.profile p {
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 13px;
+    padding-left: 1vw;
+    padding-bottom: 2vh;
+}
+
+.profile .navTitle img {
+    width: 3vw;
+    height: auto;
+}
+
+.profile .navTitle h2 {
+    position: absolute;
+    margin-left: 3vw;
+}
+
+ul li a:hover {
+    text-decoration: underline solid #333;
+}
+
+/* アニメーション */
+#sideNavL {
+    transition: transform 0.5s ease;
+    z-index: 10;
+}
+
+#sideNavL.hide {
+    transform: translateX(-120%);
+}
+
+#sideNavR {
+    transition: transform 0.5s ease;
+    z-index: 10;
+}
+
+#sideNavR.hide {
+    transform: translateX(120%);
+}
+
+
+/* =====mainの設定===== */
+main {
+    width: 66vw;
+    padding: 2vh;
+}
+
+main h2 {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    margin-left: 2vw;
+}
+
+main p {
+    max-width: 70vw;
+    text-align: center;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.mainText {
+    display: block;
+    width: 70vw;
+    margin: 0 auto;
+}
+
+
+/* =====フッター===== */
+footer {
+    background-color: #E6E6FA;
+    text-align: center;
+}
+
+
+#main {
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 3s ease;
+}
+
+#main.hide {
+    transform: translateY(-10%);
+}
+
+#main.show {
+    opacity: 1;
+}
+
+#mainP {
+    position: absolute;
+    transition: margin-top 0.5s ease;
+}
+
+#mainP.hide {
+    margin-top: 3vh;
+}
+
+
+/* =====ローディング===== */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ダークモード時のローディング画面 */
+.dark-mode #loading-overlay {
+    background-color: #1a1a1a;
+}
+
+#loading-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.progress-wrapper {
+    width: min(60vw, 400px);
+}
+
+.progress-bar-bg {
+    width: 100%;
+    height: 16px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ダークモード時のプログレスバー背景 */
+.dark-mode .progress-bar-bg {
+    background: #333;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #3b82f6;
+    transition: width 0.5s ease;
+}
+
+/* ダークモード時のプログレスバー */
+.dark-mode .progress-bar {
+    background: #60a5fa;
+}
+
+.progress-text {
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 30px;
+    color: #000;
+}
+
+/* ダークモード時のプログレステキスト */
+.dark-mode .progress-text {
+    color: #fff;
+}
+
+#body {
+    display: none;
+}
+
+#body.show {
+    display: block;
+}
+
+
+/* =====ページ設定===== */
+body {
+    overflow-x: hidden;
+    transition: opacity 0.5s ease-out;
+}
+
+/* 共通のトランジション設定 */
+header,
+.headerNav ul,
+.sideNavL,
+.sideNavR,
+footer,
+.profile .profMain,
+.dorrBtn {
+    transition: all 0.5s ease;
+}
+
+/* リンクの共通スタイル */
+a,
+li>a,
+.headerNav ul li a,
+.mapList ul li a,
+.animeList ul li a,
+.popularArticleRanking ol li a,
+.tagList ul li a,
+.latestBlog ul li a,
+.siteMapBtn a,
+.adminBtn a,
+.profile .profMain h3,
+.profile .profMain p {
+    transition: all 0.5s ease;
+}
+
+/* ホバー効果の共通スタイル */
+.headerNav ul li a:hover {
+    text-decoration: underline double;
+}
+
+.siteMapBtn a:hover,
+.adminBtn a:hover,
+.popularArticleRanking a:hover,
+ul li a:hover,
+.tagList .tagListTop a:hover {
+    text-decoration: underline solid;
+}
+
+/* ダークモード固有のスタイル */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-mode header {
+    background-color: #2d2d2d;
+}
+
+.dark-mode .headerNav ul {
+    background-color: #3d3d3d;
+}
+
+.dark-mode .sideNavL,
+.dark-mode .sideNavR,
+.dark-mode footer {
+    background-color: #2d2d2d;
+}
+
+.dark-mode .profile .profMain {
+    background-color: #3d3d3d;
+}
+
+.dark-mode a,
+.dark-mode li>a,
+.dark-mode .headerNav ul li a,
+.dark-mode .mapList ul li a,
+.dark-mode .animeList ul li a,
+.dark-mode .popularArticleRanking ol li a,
+.dark-mode .tagList ul li a,
+.dark-mode .latestBlog ul li a,
+.dark-mode .siteMapBtn a,
+.dark-mode .adminBtn a,
+.dark-mode .tagList .tagListTop a,
+.dark-mode .popularArticleRanking .blogTitle,
+.dark-mode .profile .profMain h3,
+.dark-mode .profile .profMain p,
+.dark-mode .mapList ul li a::after,
+.dark-mode .tagList ul li a::before,
+.dark-mode .animeList ul .aiueo .htow li a::after,
+.dark-mode .animeList ul .aiueo .aton li a::after,
+.dark-mode footer a {
+    color: #ffffff;
+}
+
+/* アニメーション */
+@keyframes rotateToSun {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateToMoon {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.dark-mode .dorrBtn p {
+    animation: rotateToSun 1s ease;
+}
+
+body:not(.dark-mode) .dorrBtn p {
+    animation: rotateToMoon 1s ease;
+}
+
+/* 要素の表示/非表示アニメーション */
+header.hide {
+    transform: translateY(-120%) !important;
+}
+
+#sideNavL.hide {
+    transform: translateX(-120%) !important;
+}
+
+#sideNavR.hide {
+    transform: translateX(120%) !important;
+}
+
+#main {
+    opacity: 0;
+    transform: translateY(0);
+}
+
+#main.hide {
+    transform: translateY(-10%);
+}
+
+#main.show {
+    opacity: 1;
+}
+
+/* ヘッダーとサイドナビのアニメーション */
+header,
+.sideNavL,
+.sideNavR {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease-out;
+}
+
+header.show,
+.sideNavL.show,
+.sideNavR.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* トランジション設定 */
+header,
+.sideNavL,
+.sideNavR {
+    transition: transform 0.5s ease !important;
+}
+
+@media screen and (max-width: 393px) {
+
+    .sideNavL,
+    .sideNavR {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        position: fixed;
+        top: 0;
+        height: 100vh;
+        transform: translateX(-100%);
+        z-index: 100;
+    }
+
+    .sideNavL.active,
+    .sideNavR.active {
+        transform: translateX(0);
+    }
+
+    .hamburgerBtn p {
+        font-size: 2rem;
+        top: 0.5rem;
+        left: 1rem;
+    }
+
+    .dorrBtn p {
+        font-size: 1.8rem;
+        top: 0.5rem;
+        right: 1rem;
+    }
+
+    .title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .rotateName {
+        position: static;
+        transform: none;
+        left: auto;
+    }
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 640px) {
+
+    .sideNavL,
+    .sideNavR {
+        display: none;
+    }
+
+    .headerNav {
+        display: none;
+    }
+
+    .headerNav,
+    .headerNav ul,
+    .headerNav ul li,
+    .headerNav ul li a {
+        display: none;
+    }
+}
+
+.popularArticleRanking {
+    margin-top: 10px;
+}
+
+.popularArticleRanking .navTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.popularArticleRanking .navTitle h2 {
+    font-size: 16px;
+    white-space: nowrap;
+}

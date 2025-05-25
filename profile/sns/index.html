@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/sns.css">
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Yusei+Magic&family=Zen+Maru+Gothic&display=swap"
+        rel="stylesheet">
+
+    <title>さめまるのアニメ日記</title>
+</head>
+
+<body id="snsPage">
+    <!-- ローディングエリア -->
+    <div id="loading-overlay" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progress-wrapper">
+            <div class="progress-bar-bg">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="progress-text" id="progress-text">0 %</div>
+        </div>
+    </div>
+
+    <div id="body">
+        <!-- ヘッダー -->
+        <div class="hamburgerBtn">
+            <p id="hamburgerBtn">≡</p>
+        </div>
+        <div class="dorrBtn">
+            <p id="dorrBtn">🌙</p>
+        </div>
+        <header id="header">
+
+            <div class="title">
+                <h1>
+                    <span class="rotateName">さめまるの</span>
+                    <span class="titleName">聖地巡礼ブログ</span>
+                </h1>
+            </div>
+
+            <nav class="headerNav">
+                <ul>
+                    <li><a href="../../index.html" class="topBtn">トップ</a></li>
+                    <li><a href="#">ブログ</a></li>
+                    <li><a href="../index.html">プロフィール</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <!-- サイドナビとメイン -->
+    <div class="mainNav">
+        <!-- 左サイド -->
+        <div id="sideNavL" class="sideNavL">
+
+            <!-- 地図セクション -->
+            <section class="mapList">
+                <div class="navTitle">
+                    <img src="../../img/マップアイコン.png" alt="マップアイコン">
+                    <h2>地図</h2>
+                </div>
+                <ul>
+                    <li><a href="#">北海道</a></li>
+                    <li><a href="#">東北地方</a></li>
+                    <li><a href="#">関東地方</a></li>
+                    <li><a href="#">中部地方</a></li>
+                    <li><a href="#">近畿地方</a></li>
+                    <li><a href="#">中国地方</a></li>
+                    <li><a href="#">四国地方</a></li>
+                    <li><a href="#">九州地方</a></li>
+                    <li><a href="#">沖縄県</a></li>
+                </ul>
+            </section>
+
+            <!-- アニメセクション -->
+            <section class="animeList">
+                <div class="navTitle">
+                    <img src="../../img/聖地巡礼.png" alt="聖地巡礼">
+                    <h2>アニメ</h2>
+                </div>
+                <ul>
+                    <div class="aiueo">
+                        <div class="aton">
+                            <li><a href="#">あ行</a></li>
+                            <li><a href="#">か行</a></li>
+                            <li><a href="#">さ行</a></li>
+                            <li><a href="#">た行</a></li>
+                            <li><a href="#">な行</a></li>
+                        </div>
+                        <div class="htow">
+                            <li><a href="#">は行</a></li>
+                            <li><a href="#">ま行</a></li>
+                            <li><a href="#">や行</a></li>
+                            <li><a href="#">ら行</a></li>
+                            <li><a href="#">わ行</a></li>
+                        </div>
+                    </div>
+                </ul>
+            </section>
+
+            <div class="siteMapBtn">
+                <a href="#">サイトマップ</a>
+            </div>
+
+            <div class="adminBtn">
+                <a href="#">管理者用ページ</a>
+            </div>
+        </div>
+
+        <!-- メインコンテンツ -->
+        <main id="main">
+            <h2 id="mainTitle">SNSリンク集</h2>
+
+            <div id="mainP">
+                <div class="mainText" id="mainText">
+                    <div class="snsBtn" id="snsBtn">
+                        <div class="twitterBtn">
+                            <a href="https://x.com/Samemaru07_0830" target="_blank">Twitter(新X)</a>
+                        </div>
+                        <div class="instaBtn">
+                            <a href="https://www.instagram.com/same._.0830/" target="_blank">Instagram</a>
+                        </div>
+                    </div>
+                    <div id="SNSPageGotoTechBlogBtn" class="gotoTechBlogBtn">
+                        <a href="tech-blog/index.html">技術記事はこちら</a>
+                    </div>
+                </div>
+                <div class="backBtn">
+                    <a href="../index.html">
+                        << 戻る</a>
+                </div>
+            </div>
+        </main>
+
+        <!-- 右サイド -->
+        <div id="sideNavR" class="sideNavR">
+            <section class="popularArticleRanking">
+                <div class="navTitle">
+                    <img src="../../img/王冠.png" alt="👑">
+                    <h2>人気記事ランキング</h2>
+                </div>
+                <ol>
+                    <li><a href="#">🥇<span class="blogTitle">蒼穹のファフナー×尾道コラボ</span></a></li>
+                    <li><a href="#">🥈<span class="blogTitle">青ブタ聖地巡礼 in 七里ヶ浜</span></a></li>
+                    <li><a href="#">🥉<span class="blogTitle">艦これ 聖地巡礼！in 呉</span></a></li>
+                </ol>
+            </section>
+
+            <section class="tagList">
+                <div class="navTitle">
+                    <img src="../../img/タグ.png" alt="#">
+                    <h2>タグ(上位6件)</h2>
+                </div>
+                <ul>
+                    <li><a href="#">コラボカフェ</a></li>
+                    <li><a href="#">周年</a></li>
+                    <li><a href="#">周年記念</a></li>
+                    <li><a href="#">コラボ</a></li>
+                    <li><a href="#">聖地巡礼</a></li>
+                    <li><a href="#">イベント</a></li>
+                </ul>
+                <div class="tagListTop">
+                    <a href="#"><strong>タグ一覧</strong></a>
+                </div>
+            </section>
+
+            <section class="latestBlog">
+                <div class="navTitle">
+                    <img src="../../img/カレンダー.png" alt="📅">
+                    <h2>最近の投稿</h2>
+                </div>
+                <ul>
+                    <li><a href="#">蒼穹のファフナー聖地巡礼 in 尾道</a></li>
+                    <li><a href="#">蒼穹のファフナー×尾道コラボ in Tearoom リオ</a></li>
+                    <li><a href="#">艦これ×呉ハイカラ食堂 コラボ</a></li>
+                </ul>
+            </section>
+
+            <section class="profile">
+                <div class="navTitle">
+                    <img src="../../img/ユーザーアイコン.png" alt="アイコン">
+                    <h2>筆者のプロフィール</h2>
+                </div>
+                <div class="profMain">
+                    <div class="userName">
+                        <img src="../../img/アイコン.jpg" alt="ﾊﾛﾊﾛ">
+                        <h3>さめまる</h3>
+                    </div>
+                    <p>
+                        17歳。高専で勉強中<br>
+                        趣味はアニメを見ながら<br>
+                        プラモデルを作ること<br>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer>
+        <p><a href="#">©さめまる (お問い合わせはこちらから)</a></p>
+    </footer>
+
+    </div>
+    <script src="../../main.js"></script>
+</body>
+
+</html>

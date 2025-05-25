@@ -1,0 +1,218 @@
+@charset "UTF-8";
+/* ===== SNSページ ===== */
+/* メイン要素全体のアニメーション */
+#main {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#main.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#mainTitle {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.3s;
+    display: block;
+    margin-top: 30px;
+    transition: margin-top 0.5s ease, font-size 0.5s ease;
+}
+
+/* SNSボタンのアニメーション */
+.snsBtn a {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.twitterBtn a {
+    animation-delay: 0.5s;
+}
+
+.qiitaBtn a {
+    animation-delay: 0.7s;
+}
+
+.zennBtn a {
+    animation-delay: 0.9s;
+}
+
+.gotoTechBlogBtn a {
+    animation-delay: 1.1s;
+}
+
+/* 戻るボタン */
+#snsPage #mainP .backBtn a {
+    color: #333 !important;
+    transition: color 0.5s ease;
+}
+
+/* ダークモード時の戻るボタン */
+#snsPage.dark-mode #mainP .backBtn a {
+    color: #ffffff !important;
+}
+
+/* アニメーションのキーフレーム */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ハンバーガーメニュー時のアニメーション */
+#mainTitle.hide {
+    margin-top: -50px;
+    font-size: 40px;
+}
+
+.mainText.hide {
+    margin-top: 30px;
+}
+
+.snsBtn.hide {
+    margin-top: 40px;
+}
+
+.gotoTechBlogBtn.hide {
+    margin-top: 60px;
+}
+
+/* SNSページのスタイル */
+#snsPage .mainText a,
+#snsPage .backBtn a {
+    text-decoration: none;
+    color: #000000;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+#snsPage .mainText a:hover {
+    text-decoration: underline solid #333;
+}
+
+#snsPage .mainText {
+    position: relative;
+}
+
+#snsPage .snsBtn {
+    display: flex;
+    gap: 200px;
+    margin-top: 39px;
+}
+
+#snsPage .twitterBtn {
+    margin-left: 80px;
+}
+
+#snsPage .gotoTechBlogBtn {
+    text-align: center;
+}
+
+#snsPage .gotoSNSBtn {
+    text-align: center;
+}
+
+#snsPage .mainText a {
+    background-color: rgb(210, 208, 208);
+    margin-left: 40px;
+    padding: 10px 50px;
+    font-size: 20px;
+    border-radius: 80px;
+}
+
+#snsPage .gotoTechBlogBtn a {
+    display: block;
+    width: 180px;
+    margin: 50px auto;
+}
+
+#snsPage .backBtn {
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    top: 300px;
+    width: 300px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#snsPage .backBtn a:hover {
+    text-decoration: underline double #333;
+}
+
+/* アニメーション */
+#mainText {
+    margin-top: 20px;
+    transition: margin-top 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+#mainText.hide {
+    margin-top: 80px;
+}
+
+.snsBtn {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+#SNSPageGotoTechBlogBtn {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.9s;
+    transition: margin-top 0.5s ease;
+}
+
+#SNSPageGotoTechBlogBtn.hide {
+    margin-top: 60px;
+}
+
+/* ハンバーガーメニュー時のアニメーション */
+#snsPage #header.hide {
+    transform: translateY(-100%);
+}
+
+#snsPage .sideNavL.hide {
+    transform: translateX(-100%);
+}
+
+#snsPage .sideNavR.hide {
+    transform: translateX(100%);
+}
+
+#snsPage #main.hide {
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+#snsPage #mainP.hide {
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+/* トランジション設定 */
+#snsPage #header,
+#snsPage .sideNavL,
+#snsPage .sideNavR,
+#snsPage #main,
+#snsPage #mainP {
+    transition: all 0.5s ease-in-out;
+}

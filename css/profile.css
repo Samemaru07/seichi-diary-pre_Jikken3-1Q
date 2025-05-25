@@ -1,0 +1,282 @@
+@charset "UTF-8";
+
+/* ===== プロフィールページ =====*/
+/* メイン要素全体のアニメーション */
+#main {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#main.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#mainTitle {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.3s;
+    display: block;
+    margin-top: 40px;
+    transition: all 0.5s ease;
+}
+
+#mainTitle.hide {
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+/* アニメーションのキーフレーム */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* テキストのアニメーション */
+.mainText p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.mainText #firstP {
+    animation-delay: 0.5s;
+}
+
+.mainText #secondP {
+    animation-delay: 0.7s;
+}
+
+.mainText #thirdP {
+    animation-delay: 0.9s;
+}
+
+/* メインテキストのアニメーション */
+#mainP {
+    transition: all 0.5s ease;
+    color: #000000;
+}
+
+#mainP.hide {
+    margin-top: 15px;
+}
+
+/* メインコンテンツの文字色トランジション */
+#mainTitle,
+#mainP,
+#firstP,
+#secondP {
+    color: #000000;
+    transition: all 0.5s ease;
+}
+
+/* ダークモード時の文字色トランジション */
+.dark-mode #mainTitle,
+.dark-mode #mainP,
+.dark-mode #firstP,
+.dark-mode #secondP {
+    color: #ffffff;
+}
+
+/* デザイン */
+#profilePage .images {
+    display: inline;
+}
+
+#profilePage .images img {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 1vh 2vh 8px 1vh #dddddd;
+    transition: all 0.5s ease;
+}
+
+#profilePage .images .barbatos {
+    width: 160px;
+    transform: rotate(-8deg);
+    margin-right: 30px;
+    z-index: -1;
+}
+
+#profilePage .images .destiny {
+    transform: rotate(5deg);
+    margin-right: 30px;
+    margin-bottom: 40px;
+    left: 200px;
+}
+
+#profilePage .images .kongo {
+    transform: rotate(-5deg);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    left: 430px;
+}
+
+#profilePage .images .ares {
+    transform: rotate(-2deg);
+    margin-bottom: 15px;
+    left: 650px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* サイドナビ閉じた時の画像拡大アニメーション */
+#profilePage .images.hide .barbatos {
+    width: 220px;
+    transform: rotate(-8deg) translateY(-10px);
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.1));
+}
+
+#profilePage .images.hide .destiny {
+    width: 240px;
+    transform: rotate(5deg) translateY(-15px);
+    left: 230px;
+    filter: drop-shadow(0 12px 8px rgba(0, 0, 0, 0.1));
+}
+
+#profilePage .images.hide .kongo {
+    width: 230px;
+    transform: rotate(-5deg) translateY(-12px);
+    left: 480px;
+    filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.1));
+}
+
+#profilePage .images.hide .ares {
+    width: 250px;
+    transform: rotate(-2deg) translateY(-15px);
+    left: 720px;
+    filter: drop-shadow(0 12px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* ダークモード時の影の調整 */
+.dark-mode #profilePage .images img {
+    box-shadow: 1vh 2vh 8px 1vh #1a1a1a;
+}
+
+.dark-mode #profilePage .images.hide img {
+    filter: drop-shadow(0 10px 8px rgba(255, 255, 255, 0.05));
+}
+
+/* アニメーション */
+#profImages {
+    display: block;
+    transition: margin-top 0.5s ease;
+    margin-top: 30px;
+    height: 500px;
+    /* 画像が大きくなっても余白を確保 */
+}
+
+#profImages.hide {
+    margin-top: 50px;
+}
+
+.mainText #firstP,
+.mainText #secondP {
+    transition: margin-bottom 0.5s ease;
+}
+
+.mainText #firstP.hide,
+.mainText #secondP.hide {
+    margin-bottom: 30px;
+}
+
+#profImages {
+    position: relative;
+}
+
+#profImages #barbatos,
+#profImages #destiny,
+#profImages #kongo,
+#profImages #ares {
+    position: absolute;
+    transition: width 0.5s ease, left 0.5s ease;
+}
+
+#profImages #barbatos {
+    left: 0;
+}
+
+#profImages #kongo {
+    top: 0;
+    transition: width 0.5s ease, left 0.5s ease, top 0.5s ease;
+}
+
+#profImages #barbatos.hide {
+    width: 300px;
+    left: -150px;
+}
+
+#profImages #destiny.hide {
+    width: 300px;
+    left: 250px;
+}
+
+#profImages #kongo.hide {
+    width: 300px;
+    left: 200px;
+    top: 300px;
+}
+
+#profImages #ares.hide {
+    width: 500px;
+    left: 600px;
+}
+
+#footer {
+    z-index: 9999;
+    transition: margin-top 0.5s ease;
+    margin-top: 30px;
+}
+
+#footer.hide {
+    margin-top: 200px;
+}
+
+.gotoSNSBtn {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.gotoSNSBtn a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: rgb(210, 208, 208);
+    padding: 10px 40px;
+    border-radius: 5px;
+}
+
+.gotoSNSBtn a:hover {
+    text-decoration: underline solid #333;
+}
+
+#profPageGotoSNSBtn {
+    transition: margin-top 0.5s ease, margin-bottom 0.5s ease;
+}
+
+#profPageGotoSNSBtn.hide {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}

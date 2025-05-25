@@ -1,0 +1,203 @@
+@charset "UTF-8";
+/* ===== 技術記事ページ ===== */
+/* メイン要素全体のアニメーション */
+#main {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#main.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#mainTitle {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+/* テキストのアニメーション */
+.mainText p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+#firstP {
+    animation-delay: 0.5s;
+}
+
+#secondP {
+    animation-delay: 0.7s;
+}
+
+/* ボタンのアニメーション */
+.githubBtn a {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.9s;
+}
+
+/* 技術記事ページのスタイル */
+#techBlogPage #main a,
+#techBlogPage .backBtn a {
+    text-decoration: none;
+    color: #000000;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    transition: all 0.5s ease;
+}
+
+/* ダークモード時の文字色 */
+.dark-mode #techBlogPage #main a,
+.dark-mode #techBlogPage .backBtn a {
+    color: #ffffff;
+}
+
+#techBlogPage #main a:hover {
+    text-decoration: underline solid #333;
+}
+
+#techBlogPage .snsBtn {
+    display: flex;
+    gap: 200px;
+    margin-left: 160px;
+    margin-top: 60px;
+}
+
+#techBlogPage .qiitaBtn a {
+    background: rgb(210, 208, 208);
+    padding: 8px 70px;
+    border-radius: 80px;
+}
+
+#techBlogPage .zennBtn a {
+    background-color: rgb(210, 208, 208);
+    padding: 8px 70px;
+    border-radius: 80px;
+}
+
+#techBlogPage .githubBtn {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#techBlogPage .githubBtn a {
+    background-color: rgb(210, 208, 208);
+    padding: 8px 70px;
+    border-radius: 80px;
+}
+
+#techBlogPage .backBtn {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+#techBlogPage .backBtn a {
+    display: inline-block;
+    font-size: 50px;
+    color: #000000;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode #techBlogPage .backBtn a,
+#techBlogPage.dark-mode .backBtn a {
+    color: #ffffff !important;
+}
+
+#techBlogPage #mainP .backBtn a:hover {
+    text-decoration: underline double #333;
+}
+
+body.dark-mode #techBlogPage #mainP .backBtn a:hover,
+#techBlogPage.dark-mode #mainP .backBtn a:hover {
+    text-decoration: underline double #ffffff;
+}
+
+/* アニメーション */
+#techBlogPage #mainTitle {
+    display: block;
+    margin-top: 30px;
+    transition: margin-top 0.5s ease, font-size 0.5s ease;
+}
+
+#techBlogPage #mainTitle.hide {
+    margin-top: -50px;
+    font-size: 50px;
+}
+
+#techBlogPage #firstP {
+    transition: margin-top 0.5s ease, margin-bottom 0.5s ease;
+}
+
+#techBlogPage #firstP.hide {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#techBlogPage #secondP {
+    margin-bottom: 50px;
+    transition: margin-bottom 0.5s ease;
+}
+
+#techBlogPage #secondP.hide {
+    margin-bottom: 80px;
+}
+
+#techBlogPage #githubBtn {
+    transition: margin-top 0.5s ease;
+}
+
+#techBlogPage #githubBtn.hide {
+    margin-top: 60px;
+}
+
+#techBlogPage #backBtn {
+    display: block;
+    margin-top: 60px;
+    transition: margin-top 0.5s ease;
+}
+
+#techBlogPage #backBtn.hide {
+    margin-top: 90px;
+}
+
+/* ハンバーガーメニュー時のアニメーション */
+header.hide {
+    transform: translateY(-100%);
+}
+
+.sideNavL.hide {
+    transform: translateX(-100%);
+}
+
+.sideNavR.hide {
+    transform: translateX(100%);
+}
+
+/* トランジション設定 */
+header,
+.sideNavL,
+.sideNavR {
+    transition: transform 0.5s ease;
+}
+
+/* アニメーションのキーフレーム */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
