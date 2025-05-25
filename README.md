@@ -5,7 +5,7 @@
 **Chrome, Edgeにて動作確認済み**
 
 <br>
-&emsp;\ 本リポジトリの主役 /
+\ 本リポジトリの主役 /
 
 [![My Skills](https://skillicons.dev/icons?i=html,css,js)](https://skillicons.dev) <ｺﾝﾆﾁﾊ×3
 
