@@ -36,7 +36,7 @@
     - [クリックしてもアニメーションが出ない](#クリックしてもアニメーションが出ない)
       - [MacBook, Safari](#macbook-safari)
       - [Chrome(Windows)](#chromewindows)
-      - [Edge(Windows)](#edgewindows)
+    - [Edge(Windows)](#edgewindows)
       - [その他](#その他)
 
 
@@ -164,7 +164,7 @@ Safariを起動 -> メニューバーの`Safari`から`設定...`をクリック
 #### Chrome(Windows)
 右上の三点リーダー -> `設定` -> 左のナビゲーションの`プライバシーとセキュリティ`をクリック -> 下にスクロールし、`サイトの設定`をクリック -> 下にスクロールし、`JavaScript (サイトがJavaScriptを...)` をクリック -> `<> サイトがJavaScriptを使用できるようにする`にチェックボックスを入れて、ページを再リロードしてください。(参照：[Chrome JavaScriptを無効にする](https://qiita.com/miriwo/items/f2f6f537a4352d909d9f))
 
-#### Edge(Windows)
+### Edge(Windows)
 右上の三点リーダー -> `設定` -> 左のナビゲーションの`Cookieとサイトのアクセス許可`をクリック -> `すべてのアクセス許可`をクリック -> `JavaScript`をクリック -> `許可`市ページを再リロードしてください。
 
 #### その他
