@@ -1,5 +1,5 @@
 # 電子情報工学実験Ⅲ 前期中間 Webサイト作成
-右上の `<> Code ⋎`より`Download ZIP`でディレクトリをダウンロードしご覧になってください。
+右上の `<> Code ▼`より`Download ZIP`でディレクトリをダウンロードしご覧になってください。
 
 **私の作ったWebページの閲覧はモニタではなくノートパソコン・スマートフォン推奨です。**
 **WindowsのChrome, Edge, iPadのSafariにて動作確認済み**
@@ -34,7 +34,10 @@
   - [9. 感想](#9-感想)
   - [10. トラブルシューティング](#10-トラブルシューティング)
     - [クリックしてもアニメーションが出ない](#クリックしてもアニメーションが出ない)
-    - [その他](#その他)
+      - [MacBook, Safari](#macbook-safari)
+      - [Chrome(Windows)](#chromewindows)
+      - [Edge(Windows)](#edgewindows)
+      - [その他](#その他)
 
 
 ## 1. 概要
@@ -61,7 +64,7 @@ HTML, CSS, JavaScriptを用いて簡単なWebサイトを作りました。
 ### 3-2. 開発環境
 - VSCode (IDE)
 - Windows 11 Home (OS)
-- 動作確認はChrome, Edgeで行いました。
+- 動作確認はChrome, Edge, Safari(iPad10th(10.9インチ))で行いました。
 
 
 ## 4. ディレクトリ構成
@@ -114,7 +117,7 @@ seichi-diary-pre/
 左上のハンバーガーメニューを押したら、ヘッダーやサイドナビゲーションが画面外に出ると同時に、各ページのメインの内容が大きく表示されるというアニメーションを実装しました。
 
 ### 4. 見やすいフォント
-[Webフォント](https://fonts.le.com/)を使用して、温かみのあるフォントを選びました。
+[Goole Webフォント](https://fonts.google.com/)を使用して、温かみのあるフォントを選びました。
 タイトルには**Yusei Magic**, 左のナビゲーションの各要素には**Mochiy Pop One**, 本文には**Zen Maru Gothic**を使用しました。
 
 ### 5. ダークモードとライトモードの切り替え
@@ -155,7 +158,14 @@ PHP, MySQL(XAMPP)を使った動的アプリの実装です。
 
 ### クリックしてもアニメーションが出ない
 ブラウザでJavaScriptが無効化されているのかもしれません。
+#### MacBook, Safari
 Safariを起動 -> メニューバーの`Safari`から`設定...`をクリック -> `セキュリティ`タブをクリックし`Webコンテンツ：JavaScriptを有効にする`にチェックを入れてください。(参照：[政府広報オンライン JavaScriptを有効に設定する方法](https://www.gov-online.go.jp/recommended_environment/faq/js/))
 
-### その他
+#### Chrome(Windows)
+右上の三点リーダー -> `設定` -> 左のナビゲーションの`プライバシーとセキュリティ`をクリック -> 下にスクロールし、`サイトの設定`をクリック -> 下にスクロールし、`JavaScript (サイトがJavaScriptを...)` をクリック -> `<> サイトがJavaScriptを使用できるようにする`にチェックボックスを入れて、ページを再リロードしてください。(参照：[Chrome JavaScriptを無効にする](https://qiita.com/miriwo/items/f2f6f537a4352d909d9f))
+
+#### Edge(Windows)
+右上の三点リーダー -> `設定` -> 左のナビゲーションの`Cookieとサイトのアクセス許可`をクリック -> `すべてのアクセス許可`をクリック -> `JavaScript`をクリック -> `許可`市ページを再リロードしてください。
+
+#### その他
 お手数ですが、issueもしくはTeamsの私のアカウントまで連絡お願いします。
